@@ -14,17 +14,14 @@ while not nome_valido:
 
         if len(nome) == 0:
             raise ValueError("O nome não pode estar vazio!")
-            exit()
         elif not all(char.isalpha() for char in nome):
             raise ValueError('Você digitou um valor inválido, por favor informe um nome alfabetico!')
-            exit()
         else:
             print(f'Nome valido: {nome}')
             nome_valido = True
 
     except ValueError as e:
         print(e)
-        exit()
 
 
 #2 Solicita ao usuario que digite o valor do seu salario
@@ -37,12 +34,11 @@ while not salario_valido:
 
         if salario <= 0:
             raise ValueError('Voce digitou um valor menor ou igual a zero para salario!')
-            exit()
         else:
             salario_valido = True
     except ValueError as e:
         print(e)
-        exit()
+
 
 
 
@@ -55,12 +51,10 @@ while not bonus_valido:
         bonus = float(input("Digite o valor do seu bônus: "))
         if bonus <= 0:
             raise ValueError('Voce digitou um valor menor ou igual a zero para bonus!')
-            exit()
         else:
             bonus_valido = True
     except ValueError as e:
         print(e)
-        exit()
 
 #4 Calcule o valor do bonus final
 # O valor do Bonus zerar a remuneração, ou o usuario inserir um salario com valor <= -1000
